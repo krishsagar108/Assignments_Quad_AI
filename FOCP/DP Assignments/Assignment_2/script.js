@@ -93,80 +93,112 @@ console.log(second_largest([1,2,3,4]));
 
 
 
+// Task -5 - Write a function remove duplciate elements from an array without using Set. 
+
+let arr3  =  [8,1,1,2,2,2,8,4,4,5,5,6,6,7]
+
+function remove_duplicate(arr3){
+
+    arr3 = arr3.sort()
+
+    let officer = 0 
+    no_of_unique = 1 
+
+    for (let index = 1; index < arr3.length; index++) {
+        if (arr3[index]!=arr3[index-1]){
+            arr3[officer+1] = arr3[index]
+            officer++
+            no_of_unique++
+        };
+        
+    }
+    arr3.splice(officer+1)
+    return arr3;
+}
+
+console.log(remove_duplicate(arr3));
+
+// Sort - nlogn
+// loop - n 
+// Time complexity - nlogn  
 
 
 
 
 
+// Task 6 - Write a function to find the sum of all even numbers in an array.
+
+function sumEven(arr) {
+    let sum = 0;
+
+    for (let num of arr) {
+        if (num % 2 === 0) {
+            sum += num;
+        }
+    }
+
+    return sum;
+}
+
+console.log(sumEven([1, 2, 3, 4, 5, 6])); // 12
 
 
+// Task 7 - Write a function to find the frequency of a given element in an array.
+
+function frequency(arr, element) {
+    let count = 0;
+
+    for (let num of arr) {
+        if (num === element) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(frequency([1, 2, 3, 2, 4, 2, 5], 2)); // 3
 
 
+// Task 8 - Write a function to check whether two strings are anagrams.
+
+function areAnagrams(str1, str2) {
+    str1 = str1.toLowerCase().replace(/\s/g, "");
+    str2 = str2.toLowerCase().replace(/\s/g, "");
+
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    return str1.split("").sort().join("") ===
+           str2.split("").sort().join("");
+}
+
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world"));   // false
 
 
+// Task 9 - Write a function to move all zeros to the end of an array
+// while maintaining the order of non-zero elements.
 
+function moveZeros(arr) {
+    let result = [];
+    let zeroCount = 0;
 
+    for (let num of arr) {
+        if (num === 0) {
+            zeroCount++;
+        } else {
+            result.push(num);
+        }
+    }
 
+    while (zeroCount > 0) {
+        result.push(0);
+        zeroCount--;
+    }
 
-// function second_highest(arr){
-//     let num1 = arr[0]
-    
-//     for (let index = 0; index < arr.length; index++) {
-//         let num2 = arr[index]
-//         if (num1>=num2){
-//             num1==num2
-//         }
-//         else if (num1<num2){
-//             num1= num2
-//         }
-//     }
-//     // console.log(arr);
-    
-//     // console.log(arr.indexOf(num1));
-//     let highest_index = arr.indexOf(num1)
-//     let chopped = arr.splice(arr.indexOf(num1),1)
-//     console.log(`${num1} is the first highest`);
+    return result;
+}
 
-//     num1 = arr[0]
-    
-//     for (let index = 0; index < arr.length; index++) {
-//         let num2 = arr[index]
-//         if (num1>=num2){
-//             num1==num2
-//         }
-//         else if (num1<num2){
-//             num1= num2
-//         }
-//     }
-//     console.log(`${num1} is the second highest`);
-//     arr.splice(highest_index,0,chopped)
-//     console.log(arr);
-    
-// }
-
-// let arr = [10, 25,190, 7, 40,100,120,15]
-// second_highest(arr)
-// function getSecondHighest(arr) {
-
-//   // Handle edge cases where array has fewer than 2 elements
-//     if (arr.length < 2) return null;
-
-//     let highest = -Infinity;
-//     let secondHighest = -Infinity;
-
-//     for (let num of arr) {
-//         if (num > highest) {
-//         // Current highest becomes second highest, new num becomes highest
-//         secondHighest = highest;
-//         highest = num;
-//         } else if (num > secondHighest && num !== highest) {
-//         // If num is smaller than highest but larger than second highest
-//         secondHighest = num;
-//         }
-//     }
-
-//     return secondHighest;
-//     }
-
-// let arr =[10, 25,190, 7, 40,100,120,15];
-// console.log(getSecondHighest(arr)); // Output: 120
+console.log(moveZeros([0, 1, 0, 3, 12])); // [1, 3, 12, 0, 0]
