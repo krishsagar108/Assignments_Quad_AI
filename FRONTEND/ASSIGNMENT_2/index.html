@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scenery">
+        <span class="sun">☀</span>
+        <span class="cloud cloud-one">☁</span>
+        <span class="cloud cloud-two">☁</span>
+        <span class="tree tree-left">🌳</span>
+        <span class="tree tree-right">🌳</span>
+        <span class="flower flower-one">🌼</span>
+        <span class="flower flower-two">🌻</span>
+    </div>
+    <main class="page">
+        <section class="form-shell" aria-labelledby="form-title">
+            <div class="form-heading">
+                <span aria-hidden="true">⭐</span>
+                <h2 id="form-title">Admission Registration Form</h2>
+                <span aria-hidden="true">⭐</span>
+            </div>
+            <p class="intro">Take the first step towards your bright future. Fill in your details below.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+
+                    <legend>👤 Student Information</legend>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="full-name">Full Name <span>*</span></label>
+                            <input type="text" id="full-name" name="full_name" placeholder="Enter your full name"
+                                minlength="3" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone Number <span>*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210"
+                                pattern="[0-9+\-\s]{10,15}" title="Enter a valid phone number" required>
+                        </div>
+                        <div class="field">
+                            <label for="dob">Date of Birth <span>*</span></label>
+                            <input type="date" id="dob" name="date_of_birth" required>
+
+                        </div>
+                        <div class="field">
+                            <label for="password">Create Password <span>*</span> </label>
+                            <input type="password" id="password" name="password" placeholder="At least 8 characters"
+                                minlength="8" required>
+                        </div>
+                        <div class="field">
+                            <span class="field-label">Gender <span>*</span></span>
+                            <div class="choice-row">
+                                <label class="choice"><input type="radio" name="gender" value="Male"> Male</label>
+                                <label class="choice"><input type="radio" name="gender" value="Female">
+                                    Female</label>
+                                <label class="choice"><input type="radio" name="gender" value="other"> Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <fieldset>
+                    <legend>🎓 Course Details</legend>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="course">Select Course <span>*</span></label>
+                            <select id="course" name="course" required>
+                                <option value="">Choose your course</option>
+                                <option value="btech-cse">B.Tech CSE</option>
+                                <option value="btech-ai-ml">B.Tech AI/ML</option>
+                                <option value="bba">BBA</option>
+                                <option value="bca">BCA</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="track">Preferred Specialisation</label>
+                            <select id="track" name="specialisation">
+                                <option value="">Select a specialisation</option>
+                                <option value="artificial-intelligence">Artificial Intelligence</option>
+                                <option value="machine-learning">Machine Learning</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="business-analytics">Business Analytics</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <span class="field-label">Your Interests</span>
+                            <div class="choice-row interests">
+                                <label class="choice"><input type="checkbox" name="interests" value="coding">
+                                    Coding</label>
+                                <label class="choice"><input type="checkbox" name="interests" value="sports">
+                                    Sports</label>
+                                <label class="choice"><input type="checkbox" name="interests" value="music">
+                                    Music</label>
+                                <label class="choice"><input type="checkbox" name="interests"
+                                        value="reading">Reading</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>📄 Additional Information</legend>
+                    <div class="form-grid upload-grid">
+                        <div class="field">
+                            <label for="photo">Upload Photograph <span>*</span></label>
+                            <input class="file-input" type="file" id="photo" name="photograph" accept="image/*"
+                                required>
+                        </div>
+                        <div class="field">
+                            <label for="documents">Supporting Documents</label>
+                            <input class="file-input" type="file" id="documents" name="documents"
+                                accept=".pdf,.jpg,.jpeg,.png">
+                            <small>Accepted formats: PDF, JPG, PNG</small>
+                        </div>
+                        <div class="field full-width">
+                            <label for="address">Residential Address <span>*</span></label>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address"
+                                required></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="declaration">
+                    <label class="choice">
+                        <input type="checkbox" name="declaration" required>
+                        I hereby decleare that the information provided is true and correct.
+                    </label>
+                </div>
+                <div class="button-row">
+                    <button class="submit-btn" type="submit">➤ &nbsp; Submit Application</button>
+                    <button class="reset-btn" type="reset">↻ &nbsp; Reset Form</button>
+                </div>
+                <p class="required-note">Fields marked <span>*</span> are required.</p>
+            </form>
+            </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
