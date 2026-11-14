@@ -1,4 +1,4 @@
-/* ---------- Theme and page background ---------- */
+
 :root {
     --forest: #23713f;
     --forest-dark: #174d2d;
@@ -94,7 +94,6 @@ body {
     right: 22%;
 }
 
-/* ---------- Main layout ---------- */
 .page {
     position: relative;
     z-index: 1;
@@ -190,7 +189,6 @@ body {
     font-size: 27px;
 }
 
-/* ---------- Form paper ---------- */
 .form-shell {
     margin-top: 13px;
     padding: 28px clamp(18px, 4vw, 42px) 30px;
@@ -357,7 +355,6 @@ textarea:focus {
     grid-column: 1 / -1;
 }
 
-/* ---------- Declaration and buttons ---------- */
 .declaration {
     margin: 4px 2px 20px;
     padding: 13px 15px;
@@ -439,7 +436,6 @@ button:active {
     font-weight: normal;
 }
 
-/* ---------- Responsive layout ---------- */
 @media (max-width: 720px) {
     body {
         padding: 16px 10px;
