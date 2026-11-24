@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Admission Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>College Admission Form</h1>
+    <p>Please fill in the details below.</p>
+
+    <form>
+        <h3>Personal Information</h3>
+
+        Full Name:
+        <input type="text" name="fullname">
+
+        Email:
+        <input type="email" name="email">
+
+        Phone Number:
+        <input type="tel" name="phone">
+
+        Date of Birth:
+        <input type="date" name="dob">
+
+        Password:
+        <input type="password" name="password">
+
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other <br>
+        Address:
+        <textarea name="address" rows="3"></textarea>
+
+        <h3>Course Details</h3>
+
+        Select Course:
+        <select name="course">
+            <option>B.Tech CSE</option>
+            <option>B.Tech AI/ML</option>
+            <option>BBA</option>
+            <option>BCA</option>
+        </select>
+
+        Interests:
+        <input type="checkbox" name="interest" value="Coding"> Coding
+        <input type="checkbox" name="interest" value="Sports"> Sports
+        <input type="checkbox" name="interest" value="Music"> Music
+        <input type="checkbox" name="interest" value="Reading"> Reading
+
+        <h3>Upload Documents</h3>
+
+        Photograph:
+        <input type="file" name="photo">
+
+        Supporting Documents:
+        <input type="file" name="documents">
+
+        <p>
+            <input type="checkbox" name="declaration" required>
+            I declare that the information is correct.
+        </p>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>

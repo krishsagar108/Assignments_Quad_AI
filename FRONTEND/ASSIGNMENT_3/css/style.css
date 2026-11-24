@@ -1,0 +1,577 @@
+```css
+/* =================================
+   1. GLOBAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f2;
+    color: #24352c;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. HEADER
+================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: #123d2b;
+    color: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #f4c95d;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f4c95d;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(10, 40, 25, 0.75),
+            rgba(10, 40, 25, 0.75)
+        ),
+        url("../images/festival.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #f4c95d;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.tagline {
+    color: #d6a928;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+/* =================================
+   4. BUTTONS
+================================= */
+
+.btn {
+    display: inline-block;
+
+    background: #e7b93f;
+    color: #123d2b;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f4cd68;
+    transform: translateY(-3px);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* =================================
+   5. GENERAL SECTIONS
+================================= */
+
+section {
+    padding: 65px 8%;
+}
+
+section h2 {
+    color: #123d2b;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.page-heading {
+    text-align: center;
+    padding: 65px 20px;
+    background: #e6eee5;
+}
+
+.page-heading h1 {
+    font-size: 45px;
+    color: #123d2b;
+    margin: 10px 0;
+}
+
+.page-heading h1 span {
+    color: #bd9226;
+}
+
+.page-heading p {
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* =================================
+   6. ABOUT SECTION
+================================= */
+
+.about-section {
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+}
+
+
+/* =================================
+   7. FESTIVAL DETAILS
+================================= */
+
+.details-section {
+    background: #e6eee5;
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.detail-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.detail-card h3 {
+    color: #bd9226;
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   8. EVENTS
+================================= */
+
+.events-section,
+.schedule-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th {
+    background: #123d2b;
+    color: white;
+}
+
+th,
+td {
+    padding: 15px;
+    border: 1px solid #d5ded5;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background: #edf3ec;
+}
+
+tbody tr:hover {
+    background: #e0eadc;
+}
+
+.event-descriptions {
+    background: #e6eee5;
+}
+
+.event-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #d6a928;
+}
+
+.event-card h3 {
+    color: #123d2b;
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   9. SCHEDULE
+================================= */
+
+.schedule-section h2 {
+    margin-top: 10px;
+}
+
+.schedule-note {
+    background: #e6eee5;
+}
+
+.schedule-note ul {
+    padding-left: 25px;
+}
+
+.schedule-note li {
+    margin: 10px 0;
+}
+
+
+/* =================================
+   10. REGISTRATION FORM
+================================= */
+
+.registration-section {
+    max-width: 850px;
+    margin: auto;
+}
+
+.registration-section form {
+    background: white;
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.registration-section form h2 {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd5cb;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #28764b;
+    box-shadow: 0 0 0 3px rgba(40, 118, 75, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-group label,
+.checkbox-group label,
+.form-group label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.radio-group input,
+.checkbox-group input,
+.form-group label:has(input[type="checkbox"]) input {
+    width: auto;
+}
+
+.form-hint {
+    color: #68776b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.reset-btn {
+    padding: 12px 25px;
+    border: 1px solid #123d2b;
+    background: white;
+    color: #123d2b;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background: #e6eee5;
+}
+
+
+/* =================================
+   11. CONTACT PAGE
+================================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-grid,
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card,
+.committee-card {
+    background: white;
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.contact-card h3,
+.committee-card h3 {
+    color: #bd9226;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #28764b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.committee-section {
+    background: #e6eee5;
+    text-align: center;
+}
+
+.college-section,
+.contact-note {
+    text-align: center;
+}
+
+.college-section p,
+.contact-note p {
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   12. REGISTRATION CALL SECTION
+================================= */
+
+.register-call {
+    text-align: center;
+    background: #123d2b;
+    color: white;
+}
+
+.register-call h2 {
+    color: white;
+}
+
+.register-call p {
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   13. VIDEO AND AUDIO
+================================= */
+
+iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+audio {
+    max-width: 100%;
+    margin-top: 15px;
+}
+
+
+/* =================================
+   14. FOOTER
+================================= */
+
+footer {
+    background: #0b2b1d;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =================================
+   15. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .details-grid,
+    .contact-grid,
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    .page-heading h1 {
+        font-size: 35px;
+    }
+
+    .registration-section form {
+        padding: 25px 18px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+}
+```

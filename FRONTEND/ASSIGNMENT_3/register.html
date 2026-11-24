@@ -1,0 +1,369 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechFest 2027 | Register</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <h2>TECHFEST <span>2027</span></h2>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="register.html" class="active">Register</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+
+            <p class="tagline">BE PART OF THE EXPERIENCE</p>
+
+            <h1>Event <span>Registration</span></h1>
+
+            <p>
+                Fill in the form below to register for TechFest 2027.
+            </p>
+
+        </section>
+
+
+        <!-- Registration Form -->
+        <section class="registration-section">
+
+            <form action="#" method="post">
+
+                <h2>Participant Information</h2>
+
+
+                <!-- Full Name -->
+                <div class="form-group">
+
+                    <label for="fullname">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- College -->
+                <div class="form-group">
+
+                    <label for="college">College Name</label>
+
+                    <input
+                        type="text"
+                        id="college"
+                        name="college"
+                        placeholder="Enter your college name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Department -->
+                <div class="form-group">
+
+                    <label for="department">Department</label>
+
+                    <select id="department" name="department" required>
+
+                        <option value="">Select Department</option>
+
+                        <option value="CSE">Computer Science</option>
+
+                        <option value="AIML">AI and Machine Learning</option>
+
+                        <option value="ECE">Electronics and Communication</option>
+
+                        <option value="ME">Mechanical Engineering</option>
+
+                        <option value="EE">Electrical Engineering</option>
+
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Academic Year -->
+                <div class="form-group">
+
+                    <label for="year">Academic Year</label>
+
+                    <select id="year" name="year" required>
+
+                        <option value="">Select Your Year</option>
+
+                        <option value="1st">First Year</option>
+
+                        <option value="2nd">Second Year</option>
+
+                        <option value="3rd">Third Year</option>
+
+                        <option value="4th">Fourth Year</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Gender -->
+                <div class="form-group">
+
+                    <label>Gender</label>
+
+                    <div class="radio-group">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Male"
+                                required
+                            >
+                            Male
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Female"
+                            >
+                            Female
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Other"
+                            >
+                            Other
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Event Preferences -->
+                <div class="form-group">
+
+                    <label>Select Events</label>
+
+                    <p class="form-hint">
+                        You can select multiple events.
+                    </p>
+
+                    <div class="checkbox-group">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="CodeSprint"
+                            >
+                            CodeSprint
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="RoboRace"
+                            >
+                            RoboRace
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="Hackathon"
+                            >
+                            Hackathon 24
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="UIUX"
+                            >
+                            UI/UX Design
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="TechQuiz"
+                            >
+                            Tech Quiz
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                name="events"
+                                value="ProjectExpo"
+                            >
+                            Project Expo
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Previous Experience -->
+                <div class="form-group">
+
+                    <label for="experience">
+                        Previous Technical Experience
+                    </label>
+
+                    <select id="experience" name="experience">
+
+                        <option value="">Select an option</option>
+
+                        <option value="beginner">Beginner</option>
+
+                        <option value="intermediate">Intermediate</option>
+
+                        <option value="advanced">Advanced</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Message -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Why do you want to participate?
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us something about yourself..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Terms and Conditions -->
+                <div class="form-group">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="terms"
+                            required
+                        >
+                        I agree to the terms and conditions.
+                    </label>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="form-buttons">
+
+                    <button type="submit" class="btn">
+                        Submit Registration
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        Reset Form
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2027 TechFest. All Rights Reserved.</p>
+
+        <p>Innovate | Create | Inspire</p>
+
+    </footer>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,47 @@
+body {
+    background-color: lightblue;
+    font-family: Arial;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    color: darkblue;
+}
+
+input, select, textarea {
+    margin: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 95%;
+    padding: 8px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
